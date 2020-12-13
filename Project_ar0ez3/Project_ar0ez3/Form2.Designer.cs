@@ -33,12 +33,6 @@
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.salesDatabaseDataSet = new Project_ar0ez3.SalesDatabaseDataSet();
             this.productTableAdapter = new Project_ar0ez3.SalesDatabaseDataSetTableAdapters.ProductTableAdapter();
-            this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoryFKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.producerFKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.brandFKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eANDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productdescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.brandBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.brandTableAdapter = new Project_ar0ez3.SalesDatabaseDataSetTableAdapters.BrandTableAdapter();
@@ -56,6 +50,12 @@
             this.fKProductToBrandBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fKProductToBrandBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.brandBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryFKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.producerFKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.brandFKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eANDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productdescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesDatabaseDataSet)).BeginInit();
@@ -70,7 +70,10 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.productIDDataGridViewTextBoxColumn,
@@ -80,11 +83,12 @@
             this.eANDataGridViewTextBoxColumn,
             this.productdescriptionDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.productBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(434, 28);
+            this.dataGridView1.Location = new System.Drawing.Point(366, 12);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(603, 515);
+            this.dataGridView1.Size = new System.Drawing.Size(742, 515);
             this.dataGridView1.TabIndex = 0;
             // 
             // productBindingSource
@@ -100,58 +104,6 @@
             // productTableAdapter
             // 
             this.productTableAdapter.ClearBeforeFill = true;
-            // 
-            // productIDDataGridViewTextBoxColumn
-            // 
-            this.productIDDataGridViewTextBoxColumn.DataPropertyName = "ProductID";
-            this.productIDDataGridViewTextBoxColumn.HeaderText = "ProductID";
-            this.productIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
-            this.productIDDataGridViewTextBoxColumn.Visible = false;
-            this.productIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // categoryFKDataGridViewTextBoxColumn
-            // 
-            this.categoryFKDataGridViewTextBoxColumn.DataPropertyName = "CategoryFK";
-            this.categoryFKDataGridViewTextBoxColumn.HeaderText = "CategoryFK";
-            this.categoryFKDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.categoryFKDataGridViewTextBoxColumn.Name = "categoryFKDataGridViewTextBoxColumn";
-            this.categoryFKDataGridViewTextBoxColumn.Visible = false;
-            this.categoryFKDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // producerFKDataGridViewTextBoxColumn
-            // 
-            this.producerFKDataGridViewTextBoxColumn.DataPropertyName = "ProducerFK";
-            this.producerFKDataGridViewTextBoxColumn.HeaderText = "ProducerFK";
-            this.producerFKDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.producerFKDataGridViewTextBoxColumn.Name = "producerFKDataGridViewTextBoxColumn";
-            this.producerFKDataGridViewTextBoxColumn.Visible = false;
-            this.producerFKDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // brandFKDataGridViewTextBoxColumn
-            // 
-            this.brandFKDataGridViewTextBoxColumn.DataPropertyName = "BrandFK";
-            this.brandFKDataGridViewTextBoxColumn.HeaderText = "BrandFK";
-            this.brandFKDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.brandFKDataGridViewTextBoxColumn.Name = "brandFKDataGridViewTextBoxColumn";
-            this.brandFKDataGridViewTextBoxColumn.Visible = false;
-            this.brandFKDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // eANDataGridViewTextBoxColumn
-            // 
-            this.eANDataGridViewTextBoxColumn.DataPropertyName = "EAN";
-            this.eANDataGridViewTextBoxColumn.HeaderText = "EAN";
-            this.eANDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.eANDataGridViewTextBoxColumn.Name = "eANDataGridViewTextBoxColumn";
-            this.eANDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // productdescriptionDataGridViewTextBoxColumn
-            // 
-            this.productdescriptionDataGridViewTextBoxColumn.DataPropertyName = "Product_description";
-            this.productdescriptionDataGridViewTextBoxColumn.HeaderText = "Product_description";
-            this.productdescriptionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.productdescriptionDataGridViewTextBoxColumn.Name = "productdescriptionDataGridViewTextBoxColumn";
-            this.productdescriptionDataGridViewTextBoxColumn.Width = 125;
             // 
             // comboBox1
             // 
@@ -193,7 +145,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(70, 189);
+            this.label3.Location = new System.Drawing.Point(70, 178);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 17);
             this.label3.TabIndex = 4;
@@ -202,6 +154,7 @@
             // comboBox2
             // 
             this.comboBox2.DataSource = this.producerBindingSource;
+            this.comboBox2.DisplayMember = "Producer_name";
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(168, 122);
             this.comboBox2.Name = "comboBox2";
@@ -213,7 +166,7 @@
             this.comboBox3.DataSource = this.brandBindingSource1;
             this.comboBox3.DisplayMember = "Brand_name";
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(168, 182);
+            this.comboBox3.Location = new System.Drawing.Point(168, 171);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(168, 24);
             this.comboBox3.TabIndex = 6;
@@ -260,6 +213,64 @@
             this.brandBindingSource1.DataMember = "Brand";
             this.brandBindingSource1.DataSource = this.salesDatabaseDataSet;
             // 
+            // productIDDataGridViewTextBoxColumn
+            // 
+            this.productIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.productIDDataGridViewTextBoxColumn.DataPropertyName = "ProductID";
+            this.productIDDataGridViewTextBoxColumn.HeaderText = "ProductID";
+            this.productIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
+            this.productIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.productIDDataGridViewTextBoxColumn.Visible = false;
+            this.productIDDataGridViewTextBoxColumn.Width = 99;
+            // 
+            // categoryFKDataGridViewTextBoxColumn
+            // 
+            this.categoryFKDataGridViewTextBoxColumn.DataPropertyName = "CategoryFK";
+            this.categoryFKDataGridViewTextBoxColumn.HeaderText = "CategoryFK";
+            this.categoryFKDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.categoryFKDataGridViewTextBoxColumn.Name = "categoryFKDataGridViewTextBoxColumn";
+            this.categoryFKDataGridViewTextBoxColumn.ReadOnly = true;
+            this.categoryFKDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // producerFKDataGridViewTextBoxColumn
+            // 
+            this.producerFKDataGridViewTextBoxColumn.DataPropertyName = "ProducerFK";
+            this.producerFKDataGridViewTextBoxColumn.HeaderText = "ProducerFK";
+            this.producerFKDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.producerFKDataGridViewTextBoxColumn.Name = "producerFKDataGridViewTextBoxColumn";
+            this.producerFKDataGridViewTextBoxColumn.ReadOnly = true;
+            this.producerFKDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // brandFKDataGridViewTextBoxColumn
+            // 
+            this.brandFKDataGridViewTextBoxColumn.DataPropertyName = "BrandFK";
+            this.brandFKDataGridViewTextBoxColumn.HeaderText = "BrandFK";
+            this.brandFKDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.brandFKDataGridViewTextBoxColumn.Name = "brandFKDataGridViewTextBoxColumn";
+            this.brandFKDataGridViewTextBoxColumn.ReadOnly = true;
+            this.brandFKDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // eANDataGridViewTextBoxColumn
+            // 
+            this.eANDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.eANDataGridViewTextBoxColumn.DataPropertyName = "EAN";
+            this.eANDataGridViewTextBoxColumn.FillWeight = 193.5829F;
+            this.eANDataGridViewTextBoxColumn.HeaderText = "EAN";
+            this.eANDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.eANDataGridViewTextBoxColumn.Name = "eANDataGridViewTextBoxColumn";
+            this.eANDataGridViewTextBoxColumn.ReadOnly = true;
+            this.eANDataGridViewTextBoxColumn.Width = 65;
+            // 
+            // productdescriptionDataGridViewTextBoxColumn
+            // 
+            this.productdescriptionDataGridViewTextBoxColumn.DataPropertyName = "Product_description";
+            this.productdescriptionDataGridViewTextBoxColumn.FillWeight = 6.417114F;
+            this.productdescriptionDataGridViewTextBoxColumn.HeaderText = "Product_description";
+            this.productdescriptionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.productdescriptionDataGridViewTextBoxColumn.Name = "productdescriptionDataGridViewTextBoxColumn";
+            this.productdescriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -296,12 +307,6 @@
         private SalesDatabaseDataSet salesDatabaseDataSet;
         private System.Windows.Forms.BindingSource productBindingSource;
         private SalesDatabaseDataSetTableAdapters.ProductTableAdapter productTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn categoryFKDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn producerFKDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn brandFKDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn eANDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productdescriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.BindingSource brandBindingSource;
         private SalesDatabaseDataSetTableAdapters.BrandTableAdapter brandTableAdapter;
@@ -319,5 +324,11 @@
         private System.Windows.Forms.BindingSource brandBindingSource1;
         private System.Windows.Forms.BindingSource fKProductToBrandBindingSource;
         private System.Windows.Forms.BindingSource fKProductToBrandBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoryFKDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn producerFKDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn brandFKDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eANDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productdescriptionDataGridViewTextBoxColumn;
     }
 }
