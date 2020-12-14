@@ -23,5 +23,7 @@ namespace Project_ar0ez3
             this.salesTableAdapter.Fill(this.salesDatabaseDataSet.Sales);
 
         }
+
+        
     }
 }

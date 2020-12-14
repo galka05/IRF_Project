@@ -96,7 +96,7 @@
             this.productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
             this.productIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.productIDDataGridViewTextBoxColumn.Visible = false;
-            this.productIDDataGridViewTextBoxColumn.Width = 99;
+            this.productIDDataGridViewTextBoxColumn.Width = 125;
             // 
             // categoryFKDataGridViewTextBoxColumn
             // 

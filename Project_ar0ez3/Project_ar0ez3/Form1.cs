@@ -12,9 +12,13 @@ namespace Project_ar0ez3
 {
     public partial class Form1 : Form
     {
+        bool isVisible = false;
         public Form1()
         {
             InitializeComponent();
+            bandBtn.Visible = false;
+            categBtn.Visible = false;
+            prodBtn.Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -26,9 +30,18 @@ namespace Project_ar0ez3
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
+            this.isVisible = !this.isVisible;
+            bandBtn.Visible = this.isVisible;
+            categBtn.Visible = this.isVisible;
+            prodBtn.Visible = this.isVisible;
 
+        }
+
+        private void categBtn_Click(object sender, EventArgs e)
+        {
+            Form3 form3 = new Form3();
             form3.Show();
+
         }
     }
 }
