@@ -71,7 +71,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AnalitycBtn.cs" />
     <Compile Include="Brand.cs">
       <DependentUpon>SalesDataModel.tt</DependentUpon>
     </Compile>

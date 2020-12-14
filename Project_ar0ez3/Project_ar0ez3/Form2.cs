@@ -31,5 +31,11 @@ namespace Project_ar0ez3
             this.productTableAdapter.Fill(this.salesDatabaseDataSet.Product);
 
         }
+
+        private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
+        {
+            this.productBindingSource.Position = this.comboBox1.SelectedIndex;
+
+        }
     }
 }

@@ -30,42 +30,38 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.salesDatabaseDataSet = new Project_ar0ez3.SalesDatabaseDataSet();
-            this.productTableAdapter = new Project_ar0ez3.SalesDatabaseDataSetTableAdapters.ProductTableAdapter();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.brandBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.brandTableAdapter = new Project_ar0ez3.SalesDatabaseDataSetTableAdapters.BrandTableAdapter();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.categoryTableAdapter = new Project_ar0ez3.SalesDatabaseDataSetTableAdapters.CategoryTableAdapter();
-            this.fKSalesToProductBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.salesTableAdapter = new Project_ar0ez3.SalesDatabaseDataSetTableAdapters.SalesTableAdapter();
-            this.producerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.producerTableAdapter = new Project_ar0ez3.SalesDatabaseDataSetTableAdapters.ProducerTableAdapter();
-            this.fKProductToBrandBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fKProductToBrandBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.brandBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryFKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.producerFKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.brandFKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eANDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productdescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.salesDatabaseDataSet = new Project_ar0ez3.SalesDatabaseDataSet();
+            this.productTableAdapter = new Project_ar0ez3.SalesDatabaseDataSetTableAdapters.ProductTableAdapter();
+            this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.brandBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.brandTableAdapter = new Project_ar0ez3.SalesDatabaseDataSetTableAdapters.BrandTableAdapter();
+            this.producerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.brandBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.categoryTableAdapter = new Project_ar0ez3.SalesDatabaseDataSetTableAdapters.CategoryTableAdapter();
+            this.fKSalesToProductBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.salesTableAdapter = new Project_ar0ez3.SalesDatabaseDataSetTableAdapters.SalesTableAdapter();
+            this.producerTableAdapter = new Project_ar0ez3.SalesDatabaseDataSetTableAdapters.ProducerTableAdapter();
+            this.fKProductToBrandBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fKProductToBrandBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesDatabaseDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.brandBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKSalesToProductBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brandBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.producerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brandBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKSalesToProductBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKProductToBrandBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKProductToBrandBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.brandBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -83,135 +79,13 @@
             this.eANDataGridViewTextBoxColumn,
             this.productdescriptionDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.productBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(366, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(34, 80);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(742, 515);
+            this.dataGridView1.Size = new System.Drawing.Size(648, 465);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataMember = "Product";
-            this.productBindingSource.DataSource = this.salesDatabaseDataSet;
-            // 
-            // salesDatabaseDataSet
-            // 
-            this.salesDatabaseDataSet.DataSetName = "SalesDatabaseDataSet";
-            this.salesDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productTableAdapter
-            // 
-            this.productTableAdapter.ClearBeforeFill = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DataSource = this.categoryBindingSource;
-            this.comboBox1.DisplayMember = "Category_name";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(168, 75);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(168, 24);
-            this.comboBox1.TabIndex = 1;
-            // 
-            // brandBindingSource
-            // 
-            this.brandBindingSource.DataMember = "Brand";
-            this.brandBindingSource.DataSource = this.salesDatabaseDataSet;
-            // 
-            // brandTableAdapter
-            // 
-            this.brandTableAdapter.ClearBeforeFill = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(70, 78);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 17);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Category";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(70, 129);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 17);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Producer";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(70, 178);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 17);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Brand";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.DataSource = this.producerBindingSource;
-            this.comboBox2.DisplayMember = "Producer_name";
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(168, 122);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(168, 24);
-            this.comboBox2.TabIndex = 5;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.DataSource = this.brandBindingSource1;
-            this.comboBox3.DisplayMember = "Brand_name";
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(168, 171);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(168, 24);
-            this.comboBox3.TabIndex = 6;
-            // 
-            // categoryBindingSource
-            // 
-            this.categoryBindingSource.DataMember = "Category";
-            this.categoryBindingSource.DataSource = this.salesDatabaseDataSet;
-            // 
-            // categoryTableAdapter
-            // 
-            this.categoryTableAdapter.ClearBeforeFill = true;
-            // 
-            // fKSalesToProductBindingSource
-            // 
-            this.fKSalesToProductBindingSource.DataMember = "FK_Sales_ToProduct";
-            this.fKSalesToProductBindingSource.DataSource = this.productBindingSource;
-            // 
-            // salesTableAdapter
-            // 
-            this.salesTableAdapter.ClearBeforeFill = true;
-            // 
-            // producerBindingSource
-            // 
-            this.producerBindingSource.DataMember = "Producer";
-            this.producerBindingSource.DataSource = this.salesDatabaseDataSet;
-            // 
-            // producerTableAdapter
-            // 
-            this.producerTableAdapter.ClearBeforeFill = true;
-            // 
-            // fKProductToBrandBindingSource
-            // 
-            this.fKProductToBrandBindingSource.DataMember = "FK_Product_ToBrand";
-            this.fKProductToBrandBindingSource.DataSource = this.brandBindingSource;
-            // 
-            // fKProductToBrandBindingSource1
-            // 
-            this.fKProductToBrandBindingSource1.DataMember = "FK_Product_ToBrand";
-            this.fKProductToBrandBindingSource1.DataSource = this.brandBindingSource;
-            // 
-            // brandBindingSource1
-            // 
-            this.brandBindingSource1.DataMember = "Brand";
-            this.brandBindingSource1.DataSource = this.salesDatabaseDataSet;
             // 
             // productIDDataGridViewTextBoxColumn
             // 
@@ -271,15 +145,96 @@
             this.productdescriptionDataGridViewTextBoxColumn.Name = "productdescriptionDataGridViewTextBoxColumn";
             this.productdescriptionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataMember = "Product";
+            this.productBindingSource.DataSource = this.salesDatabaseDataSet;
+            // 
+            // salesDatabaseDataSet
+            // 
+            this.salesDatabaseDataSet.DataSetName = "SalesDatabaseDataSet";
+            this.salesDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // productTableAdapter
+            // 
+            this.productTableAdapter.ClearBeforeFill = true;
+            // 
+            // categoryBindingSource
+            // 
+            this.categoryBindingSource.DataMember = "Category";
+            this.categoryBindingSource.DataSource = this.salesDatabaseDataSet;
+            // 
+            // brandBindingSource
+            // 
+            this.brandBindingSource.DataMember = "Brand";
+            this.brandBindingSource.DataSource = this.salesDatabaseDataSet;
+            // 
+            // brandTableAdapter
+            // 
+            this.brandTableAdapter.ClearBeforeFill = true;
+            // 
+            // producerBindingSource
+            // 
+            this.producerBindingSource.DataMember = "Producer";
+            this.producerBindingSource.DataSource = this.salesDatabaseDataSet;
+            // 
+            // brandBindingSource1
+            // 
+            this.brandBindingSource1.DataMember = "Brand";
+            this.brandBindingSource1.DataSource = this.salesDatabaseDataSet;
+            // 
+            // categoryTableAdapter
+            // 
+            this.categoryTableAdapter.ClearBeforeFill = true;
+            // 
+            // fKSalesToProductBindingSource
+            // 
+            this.fKSalesToProductBindingSource.DataMember = "FK_Sales_ToProduct";
+            this.fKSalesToProductBindingSource.DataSource = this.productBindingSource;
+            // 
+            // salesTableAdapter
+            // 
+            this.salesTableAdapter.ClearBeforeFill = true;
+            // 
+            // producerTableAdapter
+            // 
+            this.producerTableAdapter.ClearBeforeFill = true;
+            // 
+            // fKProductToBrandBindingSource
+            // 
+            this.fKProductToBrandBindingSource.DataMember = "FK_Product_ToBrand";
+            this.fKProductToBrandBindingSource.DataSource = this.brandBindingSource;
+            // 
+            // fKProductToBrandBindingSource1
+            // 
+            this.fKProductToBrandBindingSource1.DataMember = "FK_Product_ToBrand";
+            this.fKProductToBrandBindingSource1.DataSource = this.brandBindingSource;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(31, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 17);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Category";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataSource = this.categoryBindingSource;
+            this.comboBox1.DisplayMember = "Category_name";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(121, 22);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(168, 24);
+            this.comboBox1.TabIndex = 1;
+            this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1120, 571);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(740, 571);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dataGridView1);
@@ -289,13 +244,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesDatabaseDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.brandBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKSalesToProductBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brandBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.producerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brandBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKSalesToProductBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKProductToBrandBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKProductToBrandBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.brandBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,14 +262,8 @@
         private SalesDatabaseDataSet salesDatabaseDataSet;
         private System.Windows.Forms.BindingSource productBindingSource;
         private SalesDatabaseDataSetTableAdapters.ProductTableAdapter productTableAdapter;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.BindingSource brandBindingSource;
         private SalesDatabaseDataSetTableAdapters.BrandTableAdapter brandTableAdapter;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.BindingSource categoryBindingSource;
         private SalesDatabaseDataSetTableAdapters.CategoryTableAdapter categoryTableAdapter;
         private System.Windows.Forms.BindingSource fKSalesToProductBindingSource;
@@ -330,5 +279,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn brandFKDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn eANDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productdescriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
