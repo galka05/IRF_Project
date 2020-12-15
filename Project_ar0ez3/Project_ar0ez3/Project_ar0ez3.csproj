@@ -105,7 +105,6 @@
     <Compile Include="Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
-    <Compile Include="Fullscreen.cs" />
     <Compile Include="Producer.cs">
       <DependentUpon>SalesDataModel.tt</DependentUpon>
     </Compile>
@@ -143,6 +142,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SalesDataModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="YearLabel.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

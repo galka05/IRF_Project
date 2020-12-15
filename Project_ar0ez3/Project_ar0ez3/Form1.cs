@@ -16,25 +16,35 @@ namespace Project_ar0ez3
         public Form1()
         {
             InitializeComponent();
-            bandBtn.Visible = false;
+            brandBtn.Visible = false;
             categBtn.Visible = false;
             prodBtn.Visible = false;
             dataGridView1.Visible = false;
+            textBoxEAN.Visible = false;
+            labelEAN.Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.isVisible = !this.isVisible;
             dataGridView1.Visible = this.isVisible;
+            textBoxEAN.Visible = this.isVisible;
+            labelEAN.Visible = this.isVisible;
+            FilterEan();
+        }
 
+        private void FilterEan()
+        {
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.isVisible = !this.isVisible;
-            bandBtn.Visible = this.isVisible;
+            brandBtn.Visible = this.isVisible;
             categBtn.Visible = this.isVisible;
             prodBtn.Visible = this.isVisible;
+            
 
         }
 

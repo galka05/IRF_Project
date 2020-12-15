@@ -32,7 +32,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.categBtn = new System.Windows.Forms.Button();
-            this.bandBtn = new System.Windows.Forms.Button();
+            this.brandBtn = new System.Windows.Forms.Button();
             this.prodBtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -40,6 +40,8 @@
             this.productTableAdapter = new Project_ar0ez3.SalesDatabaseDataSetTableAdapters.ProductTableAdapter();
             this.eANDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productdescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBoxEAN = new System.Windows.Forms.TextBox();
+            this.labelEAN = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesDatabaseDataSet)).BeginInit();
@@ -87,18 +89,18 @@
             this.categBtn.UseVisualStyleBackColor = false;
             this.categBtn.Click += new System.EventHandler(this.categBtn_Click);
             // 
-            // bandBtn
+            // brandBtn
             // 
-            this.bandBtn.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.bandBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.bandBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bandBtn.Location = new System.Drawing.Point(141, 475);
-            this.bandBtn.Name = "bandBtn";
-            this.bandBtn.Size = new System.Drawing.Size(350, 70);
-            this.bandBtn.TabIndex = 3;
-            this.bandBtn.Text = "Brand";
-            this.bandBtn.UseVisualStyleBackColor = false;
-            this.bandBtn.Click += new System.EventHandler(this.bandBtn_Click);
+            this.brandBtn.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.brandBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.brandBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brandBtn.Location = new System.Drawing.Point(141, 475);
+            this.brandBtn.Name = "brandBtn";
+            this.brandBtn.Size = new System.Drawing.Size(350, 70);
+            this.brandBtn.TabIndex = 3;
+            this.brandBtn.Text = "Brand";
+            this.brandBtn.UseVisualStyleBackColor = false;
+            this.brandBtn.Click += new System.EventHandler(this.bandBtn_Click);
             // 
             // prodBtn
             // 
@@ -124,12 +126,12 @@
             this.eANDataGridViewTextBoxColumn,
             this.productdescriptionDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.productBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(752, 209);
+            this.dataGridView1.Location = new System.Drawing.Point(696, 209);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(446, 336);
+            this.dataGridView1.Size = new System.Drawing.Size(555, 336);
             this.dataGridView1.TabIndex = 5;
             // 
             // productBindingSource
@@ -165,6 +167,23 @@
             this.productdescriptionDataGridViewTextBoxColumn.Name = "productdescriptionDataGridViewTextBoxColumn";
             this.productdescriptionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // textBoxEAN
+            // 
+            this.textBoxEAN.Location = new System.Drawing.Point(752, 575);
+            this.textBoxEAN.Name = "textBoxEAN";
+            this.textBoxEAN.Size = new System.Drawing.Size(153, 22);
+            this.textBoxEAN.TabIndex = 6;
+            // 
+            // labelEAN
+            // 
+            this.labelEAN.AutoSize = true;
+            this.labelEAN.BackColor = System.Drawing.Color.White;
+            this.labelEAN.Location = new System.Drawing.Point(924, 575);
+            this.labelEAN.Name = "labelEAN";
+            this.labelEAN.Size = new System.Drawing.Size(46, 17);
+            this.labelEAN.TabIndex = 7;
+            this.labelEAN.Text = "label1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -174,9 +193,11 @@
             this.BackgroundImage = global::Project_ar0ez3.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1278, 681);
+            this.Controls.Add(this.labelEAN);
+            this.Controls.Add(this.textBoxEAN);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.prodBtn);
-            this.Controls.Add(this.bandBtn);
+            this.Controls.Add(this.brandBtn);
             this.Controls.Add(this.categBtn);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -188,6 +209,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesDatabaseDataSet)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -196,7 +218,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button categBtn;
-        private System.Windows.Forms.Button bandBtn;
+        private System.Windows.Forms.Button brandBtn;
         private System.Windows.Forms.Button prodBtn;
         private System.Windows.Forms.DataGridView dataGridView1;
         private SalesDatabaseDataSet salesDatabaseDataSet;
@@ -204,6 +226,8 @@
         private SalesDatabaseDataSetTableAdapters.ProductTableAdapter productTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn eANDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productdescriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox textBoxEAN;
+        private System.Windows.Forms.Label labelEAN;
     }
 }
 
