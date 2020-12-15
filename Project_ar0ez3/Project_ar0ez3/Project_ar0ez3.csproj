@@ -81,6 +81,9 @@
     <Compile Include="brandForm.Designer.cs">
       <DependentUpon>brandForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CalculateLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Category.cs">
       <DependentUpon>SalesDataModel.tt</DependentUpon>
     </Compile>

@@ -35,15 +35,11 @@
             this.bandBtn = new System.Windows.Forms.Button();
             this.prodBtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.categoryFKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.producerFKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.brandFKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eANDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productdescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.salesDatabaseDataSet = new Project_ar0ez3.SalesDatabaseDataSet();
             this.productTableAdapter = new Project_ar0ez3.SalesDatabaseDataSetTableAdapters.ProductTableAdapter();
+            this.eANDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productdescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesDatabaseDataSet)).BeginInit();
@@ -109,7 +105,7 @@
             this.prodBtn.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.prodBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.prodBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prodBtn.Location = new System.Drawing.Point(141, 339);
+            this.prodBtn.Location = new System.Drawing.Point(141, 346);
             this.prodBtn.Name = "prodBtn";
             this.prodBtn.Size = new System.Drawing.Size(350, 70);
             this.prodBtn.TabIndex = 4;
@@ -125,12 +121,8 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.categoryFKDataGridViewTextBoxColumn,
-            this.producerFKDataGridViewTextBoxColumn,
-            this.brandFKDataGridViewTextBoxColumn,
             this.eANDataGridViewTextBoxColumn,
-            this.productdescriptionDataGridViewTextBoxColumn,
-            this.productIDDataGridViewTextBoxColumn});
+            this.productdescriptionDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.productBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(752, 209);
             this.dataGridView1.Name = "dataGridView1";
@@ -140,35 +132,19 @@
             this.dataGridView1.Size = new System.Drawing.Size(446, 336);
             this.dataGridView1.TabIndex = 5;
             // 
-            // categoryFKDataGridViewTextBoxColumn
+            // productBindingSource
             // 
-            this.categoryFKDataGridViewTextBoxColumn.DataPropertyName = "CategoryFK";
-            this.categoryFKDataGridViewTextBoxColumn.HeaderText = "CategoryFK";
-            this.categoryFKDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.categoryFKDataGridViewTextBoxColumn.Name = "categoryFKDataGridViewTextBoxColumn";
-            this.categoryFKDataGridViewTextBoxColumn.ReadOnly = true;
-            this.categoryFKDataGridViewTextBoxColumn.Visible = false;
-            this.categoryFKDataGridViewTextBoxColumn.Width = 125;
+            this.productBindingSource.DataMember = "Product";
+            this.productBindingSource.DataSource = this.salesDatabaseDataSet;
             // 
-            // producerFKDataGridViewTextBoxColumn
+            // salesDatabaseDataSet
             // 
-            this.producerFKDataGridViewTextBoxColumn.DataPropertyName = "ProducerFK";
-            this.producerFKDataGridViewTextBoxColumn.HeaderText = "ProducerFK";
-            this.producerFKDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.producerFKDataGridViewTextBoxColumn.Name = "producerFKDataGridViewTextBoxColumn";
-            this.producerFKDataGridViewTextBoxColumn.ReadOnly = true;
-            this.producerFKDataGridViewTextBoxColumn.Visible = false;
-            this.producerFKDataGridViewTextBoxColumn.Width = 125;
+            this.salesDatabaseDataSet.DataSetName = "SalesDatabaseDataSet";
+            this.salesDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // brandFKDataGridViewTextBoxColumn
+            // productTableAdapter
             // 
-            this.brandFKDataGridViewTextBoxColumn.DataPropertyName = "BrandFK";
-            this.brandFKDataGridViewTextBoxColumn.HeaderText = "BrandFK";
-            this.brandFKDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.brandFKDataGridViewTextBoxColumn.Name = "brandFKDataGridViewTextBoxColumn";
-            this.brandFKDataGridViewTextBoxColumn.ReadOnly = true;
-            this.brandFKDataGridViewTextBoxColumn.Visible = false;
-            this.brandFKDataGridViewTextBoxColumn.Width = 125;
+            this.productTableAdapter.ClearBeforeFill = true;
             // 
             // eANDataGridViewTextBoxColumn
             // 
@@ -188,30 +164,6 @@
             this.productdescriptionDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.productdescriptionDataGridViewTextBoxColumn.Name = "productdescriptionDataGridViewTextBoxColumn";
             this.productdescriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // productIDDataGridViewTextBoxColumn
-            // 
-            this.productIDDataGridViewTextBoxColumn.DataPropertyName = "ProductID";
-            this.productIDDataGridViewTextBoxColumn.HeaderText = "ProductID";
-            this.productIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
-            this.productIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.productIDDataGridViewTextBoxColumn.Visible = false;
-            this.productIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataMember = "Product";
-            this.productBindingSource.DataSource = this.salesDatabaseDataSet;
-            // 
-            // salesDatabaseDataSet
-            // 
-            this.salesDatabaseDataSet.DataSetName = "SalesDatabaseDataSet";
-            this.salesDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productTableAdapter
-            // 
-            this.productTableAdapter.ClearBeforeFill = true;
             // 
             // Form1
             // 
@@ -250,12 +202,8 @@
         private SalesDatabaseDataSet salesDatabaseDataSet;
         private System.Windows.Forms.BindingSource productBindingSource;
         private SalesDatabaseDataSetTableAdapters.ProductTableAdapter productTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn categoryFKDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn producerFKDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn brandFKDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn eANDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productdescriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productIDDataGridViewTextBoxColumn;
     }
 }
 

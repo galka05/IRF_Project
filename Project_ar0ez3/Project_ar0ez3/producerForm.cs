@@ -16,5 +16,12 @@ namespace Project_ar0ez3
         {
             InitializeComponent();
         }
+
+        private void producerForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'salesDatabaseDataSet.Producer' table. You can move, or remove it, as needed.
+            this.producerTableAdapter.Fill(this.salesDatabaseDataSet.Producer);
+
+        }
     }
 }
