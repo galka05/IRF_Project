@@ -59,6 +59,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -73,6 +74,12 @@
   <ItemGroup>
     <Compile Include="Brand.cs">
       <DependentUpon>SalesDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="brandForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="brandForm.Designer.cs">
+      <DependentUpon>brandForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Category.cs">
       <DependentUpon>SalesDataModel.tt</DependentUpon>
@@ -95,8 +102,15 @@
     <Compile Include="Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Fullscreen.cs" />
     <Compile Include="Producer.cs">
       <DependentUpon>SalesDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="producerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="producerForm.Designer.cs">
+      <DependentUpon>producerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Product.cs">
       <DependentUpon>SalesDataModel.tt</DependentUpon>
@@ -135,6 +149,9 @@
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="producerForm.resx">
+      <DependentUpon>producerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -143,6 +160,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -177,6 +195,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\background.jpg" />
     <Content Include="SalesDatabase.mdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

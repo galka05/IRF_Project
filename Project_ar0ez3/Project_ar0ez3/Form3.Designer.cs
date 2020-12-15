@@ -41,6 +41,12 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.categoryTableAdapter = new Project_ar0ez3.SalesDatabaseDataSetTableAdapters.CategoryTableAdapter();
+            this.label2014 = new System.Windows.Forms.Label();
+            this.label2015 = new System.Windows.Forms.Label();
+            this.label2016 = new System.Windows.Forms.Label();
+            this.label2017 = new System.Windows.Forms.Label();
+            this.label2018 = new System.Windows.Forms.Label();
+            this.label2019 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesDatabaseDataSet)).BeginInit();
@@ -52,7 +58,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(321, 31);
+            this.dataGridView1.Location = new System.Drawing.Point(321, 40);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -75,14 +81,14 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(321, 219);
+            this.chart1.Location = new System.Drawing.Point(321, 262);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
-            series1.Name = "Series1";
+            series1.Name = "Sales";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(781, 371);
+            this.chart1.Size = new System.Drawing.Size(781, 364);
             this.chart1.TabIndex = 1;
             this.chart1.Text = "chart1";
             // 
@@ -102,7 +108,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(27, 40);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(198, 24);
+            this.comboBox1.Size = new System.Drawing.Size(259, 24);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.ValueMember = "CategoryID";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -116,11 +122,75 @@
             // 
             this.categoryTableAdapter.ClearBeforeFill = true;
             // 
+            // label2014
+            // 
+            this.label2014.AutoSize = true;
+            this.label2014.Location = new System.Drawing.Point(334, 220);
+            this.label2014.Name = "label2014";
+            this.label2014.Size = new System.Drawing.Size(46, 17);
+            this.label2014.TabIndex = 3;
+            this.label2014.Text = "label1";
+            // 
+            // label2015
+            // 
+            this.label2015.AutoSize = true;
+            this.label2015.Location = new System.Drawing.Point(412, 220);
+            this.label2015.Name = "label2015";
+            this.label2015.Size = new System.Drawing.Size(46, 17);
+            this.label2015.TabIndex = 4;
+            this.label2015.Text = "label2";
+            // 
+            // label2016
+            // 
+            this.label2016.AutoSize = true;
+            this.label2016.Location = new System.Drawing.Point(490, 220);
+            this.label2016.Name = "label2016";
+            this.label2016.Size = new System.Drawing.Size(46, 17);
+            this.label2016.TabIndex = 5;
+            this.label2016.Text = "label3";
+            this.label2016.Visible = false;
+            // 
+            // label2017
+            // 
+            this.label2017.AutoSize = true;
+            this.label2017.Location = new System.Drawing.Point(562, 220);
+            this.label2017.Name = "label2017";
+            this.label2017.Size = new System.Drawing.Size(46, 17);
+            this.label2017.TabIndex = 6;
+            this.label2017.Text = "label4";
+            this.label2017.Visible = false;
+            // 
+            // label2018
+            // 
+            this.label2018.AutoSize = true;
+            this.label2018.Location = new System.Drawing.Point(637, 220);
+            this.label2018.Name = "label2018";
+            this.label2018.Size = new System.Drawing.Size(46, 17);
+            this.label2018.TabIndex = 7;
+            this.label2018.Text = "label5";
+            this.label2018.Visible = false;
+            // 
+            // label2019
+            // 
+            this.label2019.AutoSize = true;
+            this.label2019.Location = new System.Drawing.Point(713, 220);
+            this.label2019.Name = "label2019";
+            this.label2019.Size = new System.Drawing.Size(46, 17);
+            this.label2019.TabIndex = 8;
+            this.label2019.Text = "label6";
+            this.label2019.Visible = false;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1135, 658);
+            this.Controls.Add(this.label2019);
+            this.Controls.Add(this.label2018);
+            this.Controls.Add(this.label2017);
+            this.Controls.Add(this.label2016);
+            this.Controls.Add(this.label2015);
+            this.Controls.Add(this.label2014);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.dataGridView1);
@@ -134,6 +204,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -148,5 +219,11 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.BindingSource categoryBindingSource;
         private SalesDatabaseDataSetTableAdapters.CategoryTableAdapter categoryTableAdapter;
+        private System.Windows.Forms.Label label2014;
+        private System.Windows.Forms.Label label2015;
+        private System.Windows.Forms.Label label2016;
+        private System.Windows.Forms.Label label2017;
+        private System.Windows.Forms.Label label2018;
+        private System.Windows.Forms.Label label2019;
     }
 }

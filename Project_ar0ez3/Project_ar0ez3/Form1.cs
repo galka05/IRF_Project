@@ -19,13 +19,14 @@ namespace Project_ar0ez3
             bandBtn.Visible = false;
             categBtn.Visible = false;
             prodBtn.Visible = false;
+            dataGridView1.Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            this.isVisible = !this.isVisible;
+            dataGridView1.Visible = this.isVisible;
 
-            form2.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -42,6 +43,27 @@ namespace Project_ar0ez3
             Form3 form3 = new Form3();
             form3.Show();
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'salesDatabaseDataSet.Product' table. You can move, or remove it, as needed.
+            this.productTableAdapter.Fill(this.salesDatabaseDataSet.Product);
+            // TODO: This line of code loads data into the 'salesDatabaseDataSet.Product' table. You can move, or remove it, as needed.
+            this.productTableAdapter.Fill(this.salesDatabaseDataSet.Product);
+                      
+        }
+
+        private void prodBtn_Click(object sender, EventArgs e)
+        {
+            producerForm prodform = new producerForm();
+            prodform.Show();
+        }
+
+        private void bandBtn_Click(object sender, EventArgs e)
+        {
+            brandForm brndForm = new brandForm();
+            brndForm.Show();
         }
     }
 }
