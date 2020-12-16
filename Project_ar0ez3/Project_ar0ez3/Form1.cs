@@ -20,23 +20,20 @@ namespace Project_ar0ez3
             categBtn.Visible = false;
             prodBtn.Visible = false;
             dataGridView1.Visible = false;
-            textBoxEAN.Visible = false;
-            labelEAN.Visible = false;
+            
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.isVisible = !this.isVisible;
             dataGridView1.Visible = this.isVisible;
-            textBoxEAN.Visible = this.isVisible;
-            labelEAN.Visible = this.isVisible;
-            FilterEan();
-        }
-
-        private void FilterEan()
-        {
+            
+            
             
         }
+
+        
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -50,7 +47,7 @@ namespace Project_ar0ez3
 
         private void categBtn_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
+            CategoryForm form3 = new CategoryForm();
             form3.Show();
 
         }
@@ -75,5 +72,8 @@ namespace Project_ar0ez3
             brandForm brndForm = new brandForm();
             brndForm.Show();
         }
+
+        
+
     }
 }

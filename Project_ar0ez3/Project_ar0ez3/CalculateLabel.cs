@@ -12,6 +12,7 @@ namespace Project_ar0ez3
         public CalculateLabel()
         {
             this.BackColor = System.Drawing.Color.White;
+            
 
         }
     }

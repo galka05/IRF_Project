@@ -40,8 +40,6 @@
             this.productTableAdapter = new Project_ar0ez3.SalesDatabaseDataSetTableAdapters.ProductTableAdapter();
             this.eANDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productdescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBoxEAN = new System.Windows.Forms.TextBox();
-            this.labelEAN = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesDatabaseDataSet)).BeginInit();
@@ -54,7 +52,7 @@
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(752, 62);
+            this.button1.Location = new System.Drawing.Point(658, 62);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(446, 105);
             this.button1.TabIndex = 0;
@@ -126,7 +124,7 @@
             this.eANDataGridViewTextBoxColumn,
             this.productdescriptionDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.productBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(696, 209);
+            this.dataGridView1.Location = new System.Drawing.Point(602, 209);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
@@ -152,11 +150,10 @@
             // 
             this.eANDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.eANDataGridViewTextBoxColumn.DataPropertyName = "EAN";
-            this.eANDataGridViewTextBoxColumn.HeaderText = "EAN";
+            this.eANDataGridViewTextBoxColumn.HeaderText = "EAN code";
             this.eANDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.eANDataGridViewTextBoxColumn.Name = "eANDataGridViewTextBoxColumn";
             this.eANDataGridViewTextBoxColumn.ReadOnly = true;
-            this.eANDataGridViewTextBoxColumn.Width = 65;
             // 
             // productdescriptionDataGridViewTextBoxColumn
             // 
@@ -167,23 +164,6 @@
             this.productdescriptionDataGridViewTextBoxColumn.Name = "productdescriptionDataGridViewTextBoxColumn";
             this.productdescriptionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // textBoxEAN
-            // 
-            this.textBoxEAN.Location = new System.Drawing.Point(752, 575);
-            this.textBoxEAN.Name = "textBoxEAN";
-            this.textBoxEAN.Size = new System.Drawing.Size(153, 22);
-            this.textBoxEAN.TabIndex = 6;
-            // 
-            // labelEAN
-            // 
-            this.labelEAN.AutoSize = true;
-            this.labelEAN.BackColor = System.Drawing.Color.White;
-            this.labelEAN.Location = new System.Drawing.Point(924, 575);
-            this.labelEAN.Name = "labelEAN";
-            this.labelEAN.Size = new System.Drawing.Size(46, 17);
-            this.labelEAN.TabIndex = 7;
-            this.labelEAN.Text = "label1";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -192,9 +172,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = global::Project_ar0ez3.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1278, 681);
-            this.Controls.Add(this.labelEAN);
-            this.Controls.Add(this.textBoxEAN);
+            this.ClientSize = new System.Drawing.Size(1184, 681);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.prodBtn);
             this.Controls.Add(this.brandBtn);
@@ -209,7 +187,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesDatabaseDataSet)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -226,8 +203,6 @@
         private SalesDatabaseDataSetTableAdapters.ProductTableAdapter productTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn eANDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productdescriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox textBoxEAN;
-        private System.Windows.Forms.Label labelEAN;
     }
 }
 

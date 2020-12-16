@@ -11,7 +11,7 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Project_ar0ez3
 {
-    public partial class Form3 : Form
+    public partial class CategoryForm : Form
     {
         SalesDatabaseEntities context = new SalesDatabaseEntities();
         CalculateLabel clabel2014= new CalculateLabel();
@@ -20,7 +20,7 @@ namespace Project_ar0ez3
         CalculateLabel clabel2017 = new CalculateLabel();
         CalculateLabel clabel2018 = new CalculateLabel();
         CalculateLabel clabel2019 = new CalculateLabel();
-        public Form3()
+        public CategoryForm()
         {
             InitializeComponent();
 
@@ -29,18 +29,18 @@ namespace Project_ar0ez3
      
         private void Form3_Load(object sender, EventArgs e)
         {
-            this.clabel2014.Top = 270;
-            this.clabel2014.Left = 100;
-            this.clabel2015.Top = 300;
-            this.clabel2015.Left = 100;
-            this.clabel2016.Top = 330;
-            this.clabel2016.Left = 100;
-            this.clabel2017.Top = 360;
-            this.clabel2017.Left = 100;
-            this.clabel2018.Top = 390;
-            this.clabel2018.Left = 100;
-            this.clabel2019.Top = 420;
-            this.clabel2019.Left = 100;
+            this.clabel2014.Top = 60;
+            this.clabel2014.Left = 200;
+            this.clabel2015.Top = 60;
+            this.clabel2015.Left = 310;
+            this.clabel2016.Top = 60;
+            this.clabel2016.Left = 420;
+            this.clabel2017.Top = 60;
+            this.clabel2017.Left = 530;
+            this.clabel2018.Top = 60;
+            this.clabel2018.Left = 640;
+            this.clabel2019.Top = 60;
+            this.clabel2019.Left = 750;
 
             this.Controls.Add(this.clabel2014);
             this.Controls.Add(this.clabel2015);
@@ -110,8 +110,7 @@ namespace Project_ar0ez3
         {
             int selectedID = this.comboBox1.SelectedIndex;
             var salesData = from sales in context.Sales
-                            join product in context.Products on sales.ProductFK equals product.ProductID
-                            //join category in context.Categories on product.CategoryFK equals category.CategoryID
+                            join product in context.Products on sales.ProductFK equals product.ProductID                            
                             where product.CategoryFK == (selectedID + 1)
                             select new
                             {
@@ -132,7 +131,7 @@ namespace Project_ar0ez3
             drawChart();
         }
 
-
+        
     }
 
 
