@@ -23,7 +23,7 @@ namespace Project_ar0ez3
         public producerForm()
         {
             InitializeComponent();
-        }
+        }     
 
         private void producerForm_Load(object sender, EventArgs e)
         {
@@ -46,43 +46,52 @@ namespace Project_ar0ez3
             this.Controls.Add(this.clabel2017);
             this.Controls.Add(this.clabel2018);
             this.Controls.Add(this.clabel2019);
-            // TODO: This line of code loads data into the 'salesDatabaseDataSet.Producer' table. You can move, or remove it, as needed.
-            this.producerTableAdapter.Fill(this.salesDatabaseDataSet.Producer);
 
-            chart1.Visible = Visible;
+            // TODO: This line of code loads data into the 'salesDatabaseDataSet.Category' table. You can move, or remove it, as needed.
+            this.producerTableAdapter.Fill(this.salesDatabaseDataSet.Producer);
+            // TODO: This line of code loads data into the 'salesDatabaseDataSet.Sales' table. You can move, or remove it, as needed.
+            this.salesTableAdapter.Fill(this.salesDatabaseDataSet.Sales);
+
+            prodChart.Visible = Visible;
 
             getSalesData();
             countInLabels();
             drawChart();
         }
 
-       
+        private void drawChart()
+        {
+            Series s = prodChart.Series[0];
+            s.Points.Clear();
+            s.Points.AddXY(2014, Convert.ToInt32(clabel2014.Text));
+            s.Points.AddXY(2015, Convert.ToInt32(clabel2015.Text));
+            s.Points.AddXY(2016, Convert.ToInt32(clabel2016.Text));
+            s.Points.AddXY(2017, Convert.ToInt32(clabel2017.Text));
+            s.Points.AddXY(2018, Convert.ToInt32(clabel2018.Text));
+            s.Points.AddXY(2019, Convert.ToInt32(clabel2019.Text));
+            prodChart.Visible = true;
+        }
 
         private void countInLabels()
         {
             this.clabel2014.Text = (from DataGridViewRow row in dataGridView1.Rows
                                     where row.Cells[0].FormattedValue.ToString() != string.Empty
                                     select Convert.ToInt32(row.Cells[0].FormattedValue)).Sum().ToString();
-
             this.clabel2015.Text = (from DataGridViewRow row in dataGridView1.Rows
-                                    where row.Cells[1].FormattedValue.ToString() != string.Empty
-                                    select Convert.ToInt32(row.Cells[1].FormattedValue)).Sum().ToString();
-
+                                    where row.Cells[0].FormattedValue.ToString() != string.Empty
+                                    select Convert.ToInt32(row.Cells[0].FormattedValue)).Sum().ToString();
             this.clabel2016.Text = (from DataGridViewRow row in dataGridView1.Rows
-                                    where row.Cells[2].FormattedValue.ToString() != string.Empty
-                                    select Convert.ToInt32(row.Cells[2].FormattedValue)).Sum().ToString();
-
+                                    where row.Cells[0].FormattedValue.ToString() != string.Empty
+                                    select Convert.ToInt32(row.Cells[0].FormattedValue)).Sum().ToString();
             this.clabel2017.Text = (from DataGridViewRow row in dataGridView1.Rows
-                                    where row.Cells[3].FormattedValue.ToString() != string.Empty
-                                    select Convert.ToInt32(row.Cells[3].FormattedValue)).Sum().ToString();
-
+                                    where row.Cells[0].FormattedValue.ToString() != string.Empty
+                                    select Convert.ToInt32(row.Cells[0].FormattedValue)).Sum().ToString();
             this.clabel2018.Text = (from DataGridViewRow row in dataGridView1.Rows
-                                    where row.Cells[4].FormattedValue.ToString() != string.Empty
-                                    select Convert.ToInt32(row.Cells[4].FormattedValue)).Sum().ToString();
-
+                                    where row.Cells[0].FormattedValue.ToString() != string.Empty
+                                    select Convert.ToInt32(row.Cells[0].FormattedValue)).Sum().ToString();
             this.clabel2019.Text = (from DataGridViewRow row in dataGridView1.Rows
-                                    where row.Cells[5].FormattedValue.ToString() != string.Empty
-                                    select Convert.ToInt32(row.Cells[5].FormattedValue)).Sum().ToString();
+                                    where row.Cells[0].FormattedValue.ToString() != string.Empty
+                                    select Convert.ToInt32(row.Cells[0].FormattedValue)).Sum().ToString();
         }
 
         private void getSalesData()
@@ -103,18 +112,6 @@ namespace Project_ar0ez3
                             };
             this.dataGridView1.DataSource = salesData.ToList();
         }
-        private void drawChart()
-        {
-            Series s = chart1.Series[0];
-            s.Points.Clear();
-            s.Points.AddXY(2014, Convert.ToInt32(clabel2014.Text));
-            s.Points.AddXY(2015, Convert.ToInt32(clabel2015.Text));
-            s.Points.AddXY(2016, Convert.ToInt32(clabel2016.Text));
-            s.Points.AddXY(2017, Convert.ToInt32(clabel2017.Text));
-            s.Points.AddXY(2018, Convert.ToInt32(clabel2018.Text));
-            s.Points.AddXY(2019, Convert.ToInt32(clabel2019.Text));
-            chart1.Visible = true;
-        }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             getSalesData();
@@ -122,4 +119,5 @@ namespace Project_ar0ez3
             drawChart();
         }
     }
+
 }

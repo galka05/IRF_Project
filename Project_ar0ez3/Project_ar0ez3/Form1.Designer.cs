@@ -35,11 +35,11 @@
             this.brandBtn = new System.Windows.Forms.Button();
             this.prodBtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.eANDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productdescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.salesDatabaseDataSet = new Project_ar0ez3.SalesDatabaseDataSet();
             this.productTableAdapter = new Project_ar0ez3.SalesDatabaseDataSetTableAdapters.ProductTableAdapter();
-            this.eANDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productdescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesDatabaseDataSet)).BeginInit();
@@ -79,7 +79,7 @@
             this.categBtn.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.categBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.categBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.categBtn.Location = new System.Drawing.Point(141, 209);
+            this.categBtn.Location = new System.Drawing.Point(141, 349);
             this.categBtn.Name = "categBtn";
             this.categBtn.Size = new System.Drawing.Size(350, 70);
             this.categBtn.TabIndex = 2;
@@ -92,7 +92,7 @@
             this.brandBtn.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.brandBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.brandBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.brandBtn.Location = new System.Drawing.Point(141, 475);
+            this.brandBtn.Location = new System.Drawing.Point(141, 220);
             this.brandBtn.Name = "brandBtn";
             this.brandBtn.Size = new System.Drawing.Size(350, 70);
             this.brandBtn.TabIndex = 3;
@@ -105,7 +105,7 @@
             this.prodBtn.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.prodBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.prodBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prodBtn.Location = new System.Drawing.Point(141, 346);
+            this.prodBtn.Location = new System.Drawing.Point(141, 475);
             this.prodBtn.Name = "prodBtn";
             this.prodBtn.Size = new System.Drawing.Size(350, 70);
             this.prodBtn.TabIndex = 4;
@@ -132,6 +132,25 @@
             this.dataGridView1.Size = new System.Drawing.Size(555, 336);
             this.dataGridView1.TabIndex = 5;
             // 
+            // eANDataGridViewTextBoxColumn
+            // 
+            this.eANDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.eANDataGridViewTextBoxColumn.DataPropertyName = "EAN";
+            this.eANDataGridViewTextBoxColumn.HeaderText = "EAN code";
+            this.eANDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.eANDataGridViewTextBoxColumn.Name = "eANDataGridViewTextBoxColumn";
+            this.eANDataGridViewTextBoxColumn.ReadOnly = true;
+            this.eANDataGridViewTextBoxColumn.Width = 92;
+            // 
+            // productdescriptionDataGridViewTextBoxColumn
+            // 
+            this.productdescriptionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.productdescriptionDataGridViewTextBoxColumn.DataPropertyName = "Product_description";
+            this.productdescriptionDataGridViewTextBoxColumn.HeaderText = "Product Description";
+            this.productdescriptionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.productdescriptionDataGridViewTextBoxColumn.Name = "productdescriptionDataGridViewTextBoxColumn";
+            this.productdescriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // productBindingSource
             // 
             this.productBindingSource.DataMember = "Product";
@@ -145,24 +164,6 @@
             // productTableAdapter
             // 
             this.productTableAdapter.ClearBeforeFill = true;
-            // 
-            // eANDataGridViewTextBoxColumn
-            // 
-            this.eANDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.eANDataGridViewTextBoxColumn.DataPropertyName = "EAN";
-            this.eANDataGridViewTextBoxColumn.HeaderText = "EAN code";
-            this.eANDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.eANDataGridViewTextBoxColumn.Name = "eANDataGridViewTextBoxColumn";
-            this.eANDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // productdescriptionDataGridViewTextBoxColumn
-            // 
-            this.productdescriptionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.productdescriptionDataGridViewTextBoxColumn.DataPropertyName = "Product_description";
-            this.productdescriptionDataGridViewTextBoxColumn.HeaderText = "Product Description";
-            this.productdescriptionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.productdescriptionDataGridViewTextBoxColumn.Name = "productdescriptionDataGridViewTextBoxColumn";
-            this.productdescriptionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Form1
             // 

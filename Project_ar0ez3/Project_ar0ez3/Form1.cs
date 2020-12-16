@@ -21,7 +21,7 @@ namespace Project_ar0ez3
             prodBtn.Visible = false;
             dataGridView1.Visible = false;
             
-            
+           
         }
 
         private void button1_Click(object sender, EventArgs e)

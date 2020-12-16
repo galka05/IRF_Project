@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Project_ar0ez3\Project_ar0ez3\SalesDataModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\katag\source\repos\IRF_Project2\Project_ar0ez3\Project_ar0ez3\SalesDataModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

@@ -9,7 +9,7 @@
         <EntityTypeShape EntityType="SalesDatabaseModel.Category" Width="1.5" PointX="2.75" PointY="1.625" IsExpanded="true" />
         <EntityTypeShape EntityType="SalesDatabaseModel.Producer" Width="1.5" PointX="2.75" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SalesDatabaseModel.Product" Width="1.5" PointX="5.375" PointY="2.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="SalesDatabaseModel.Sale" Width="1.5" PointX="7.5" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalesDatabaseModel.Sale" Width="1.5" PointX="7.625" PointY="2.125" IsExpanded="true" />
         <AssociationConnector Association="SalesDatabaseModel.FK_Product_ToBrand" ManuallyRouted="false" />
         <AssociationConnector Association="SalesDatabaseModel.FK_Product_ToCategory" ManuallyRouted="false" />
         <AssociationConnector Association="SalesDatabaseModel.FK_Product_ToProducer" ManuallyRouted="false" />

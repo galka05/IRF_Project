@@ -23,8 +23,6 @@ namespace Project_ar0ez3
         public CategoryForm()
         {
             InitializeComponent();
-
-            
         }
      
         private void Form3_Load(object sender, EventArgs e)
